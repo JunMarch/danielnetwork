@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+:root{
+    --heading : 'Open Sans';
+    --text : 'Montserrat';
+    --primary : hsla(278.6,86.1%,19.8%,0.352);
+    --accent : hsla(278.6,86.1%,19.8%,0.98);
+    --base-color : hsla(0,0%,86.7%,0.286);
+    --secondary : hsla(288,70.9%,48.9%,0.629);
+    --heavy :700;
+    --md : 600;
+    --fnt-size: 1.2rem;
+    --thin : 300;
+}
+html{
+    padding: 0;
+    margin:0;
+    
+}
+body{
+    padding: 0;
+    margin:0;
+    font-family: var(--text);
+    font-size: var(--fnt-size);
+    font-weight: var(--thin);
+    background-color: var(--base-color);
+}
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 10000;
+}
+.nav-wrapper{
+    position: relative;
+    display : grid;
+    grid-template-columns: 70% 30%;
+    width: auto;
+    height : 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--accent);
+    transition: color 0.5s ease;
+}
+a:hover{
+    color:black;
+    background-color: #f5f5f54c;
+    border-radius :5px;
+    padding: 7px;
+}
+.nav-content{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1000;
+    display :none;
+    flex-direction :column;
+    gap :10px;
+    background-color: hsl(0,0%,100%);
+    height: 100vh;
+    width: 100%;
+    transition:width 0.5s ease;
+    margin: 0;
+    padding: 0;
+}
+.bi-x-lg{
+    justify-self: start;
+}
+.nav-content li{
+    margin: 10px;
+}
+.menu{
+    display: block;
+    justify-self: end;
+}
+.mobile-donate > a{
+        width: 150px;
+    background-color: var(--accent);
+    color : white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    justify-self: end;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+    user-select: none;
+    webkit-user-select: none;
+}
+.brand_icon{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+.brand{
+    display: flex;
+    flex-direction: row;
+    align-items :center;
+}
+.brand_name{
+    font-size: 0.8rem;
+}
+.donate{
+    display: none;
+}
+.container{
+    position: relative;
+}
+.hero-section{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    padding: 0;
+    margin: 0;
+}
+.hero-text{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: var(--thin);
+    color: white;
+    font-size: 80%;
+    padding-inline:20px;
+}
+.hero-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay{
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    left: 0;
+    height: 60vh;
+    width: 100%;
+    background-color: hsla(0,0%,0%,0.672);
+}
+.react-buttons{
+    margin-block-start: 50px;
+    display: flex;
+    gap: 20px;
+}
+.react-buttons > a{
+    width: auto;
+    height: 40px;
+    background-color: var(--accent);
+    color: white;
+    padding-inline: 5px;
+    font-size: 120%;
+    border-radius :5px;
+    display: flex;
+    transition: background-color 0.5s ease;
+    text-align-last: center;
+    justify-content: center;
+    align-items: center;
+}
+.react-buttons > a:hover{
+    background-color: var(--secondary);
+    width: 150px;
+}
+.short-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+}
+.about-us{
+    text-align: center;
+    padding-inline: 20px;
+    padding-block: 20px;
+    height: auto;
+    width: auto;
+}
+.about-us > p{
+    word-spacing: 2px;
+    line-height: 1.8;
+    font-size: 80%;
+}
+.profile-img{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+.three-columns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 30px
+}
+.three{
+    text-align: center;
+    height: auto;
+    width :300px;
+    background-color: hsl(0,0.4%,90.5%);
+    line-height: 1.8;
+    font-size: 80%;
+    border-radius:10px;
+    padding-inline: 20px;
+    padding-block: 20px;
+}
+.projects{
+    height: 200px;
+    width: auto;
+    display: flex;
+    overflow-x: scroll;
+    gap: 30px;
+    padding-inline: 20px;
+}
+.p-img{
+    display: block;
+    width: 200px;
+    height: 100px;
+    object-fit : contain;
+    /* border-radius:15px; */
+}
+.about-us-full{
+    font-size: 70%;
+    word-spacing: 8px;
+    line-height: 1.8;
+    text-align: center;
+    padding-inline:20px;
+    padding-block:30px;
+}
+.about-img{
+    width: 100%;
+    height: 60px;
+    object-fit: cover;
+    object-position: center;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding-inline:10px ;
+}
+.contact h5{
+    text-align: center;
+    padding-block-end:20px;
+    border-bottom : 5px solid var(--accent);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 10px;
+}
+.contact p{
+    text-align: center;
+    font-size: 80%;
+}
+.info{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+
+}
+.info > address{
+    display: block;
+}
+.info > p{
+    font-size: 60%;
+}
+.donate-img{
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+}
+.donate-s{
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+    font-size: 80%;
+    background-color: white;
+    
+}
+
+#don{
+    height: 70px;
+    width: auto;
+    object-fit: cover;
+}
+#p-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.projects-s{
+    height: auto;
+    width: auto;
+    padding-inline: 20px;
+    gap: 5px;
+    display: grid;
+    overflow-x: scroll;
+     grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+#p1-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: contain;
+}
